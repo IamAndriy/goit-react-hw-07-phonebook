@@ -1,0 +1,68 @@
+.contact-li{
+    display: flex;
+    align-items: center;
+
+    &:hover, &:focus{
+        background-color: rgb(215, 215, 215);
+    }
+    @media screen and (max-width: 549.8px){
+        font-size: 12px;
+    }
+    @media screen and (max-width: 399.8px){
+        font-size: 10px;
+    }
+}
+
+.contact-div{
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+.contact-name{
+   width: calc(100% * 2 / 3);
+
+    @media screen and (max-width: 899.8px){
+        font-size: 12px;
+    }    
+    @media screen and (max-width: 399.8px){
+        width: 100%;
+    }
+}
+.contact-number{
+    width: calc(100% / 3);
+
+    @media screen and (max-width: 899.8px){
+        font-size: 12px;
+    }
+    @media screen and (max-width: 399.8px){
+        width: 100%;
+    }
+}
+.contact-del-btn{
+    padding: 0;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    line-height: 1;
+    margin-right: 15px;
+    border: none;
+    box-shadow: 1px 1px 1px black;
+
+    &:hover, &:focus{
+       box-shadow: 2px 2px 2px black;   
+    }
+    .contact-del-icon{
+        stroke: black;
+        width: 12px;
+        height:12px;
+        padding: 0;
+    }
+}
+
+.delSuccess{
+    background-color: rgb(124, 124, 123);
+    color: white;
+}

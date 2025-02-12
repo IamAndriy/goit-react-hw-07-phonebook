@@ -1,0 +1,82 @@
+.section{
+    padding: 41px 40px 0px 0px;
+    max-width: 400px;
+    width: 100%;
+    
+    @media screen and (max-width: 767.8px){
+        padding: 10px 0px 0px 0px;
+    }
+}
+
+.label{
+    display: flex;
+    flex-direction: column; 
+}
+.label .name{
+    @media screen and (max-width: 499.8px){
+        width: 100%;
+    }
+}
+.label .number{
+    @media screen and (max-width: 499.8px){
+        width: 100%;
+    }
+}
+.name, .number{
+    padding: 5px 25px 5px 10px;
+
+    @media screen and (max-width: 549.8px){
+        width: calc(100% - 35px);
+    }
+}
+.massage{
+    margin-bottom: 20px;
+    font-size: 10px;
+    color: grey;
+}
+.label .massage{
+    @media screen and (max-width: 767.9px){
+        margin-bottom: 10px;
+    }
+}
+
+.visually-hidden{ 
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+.btn{
+font-size: 16px;;
+font-weight: 500;
+padding: 5px 10px;
+border: none;
+color: white;
+background-color:rgb(203, 163, 111);
+
+&:hover, &:focus{
+    box-shadow: 1px 1px 1px grey;
+}
+
+@media screen and (max-width: 767.8px){
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 499.8px){
+    margin-bottom: 20px;
+}
+}
+
+.error{
+    background-color: rgb(227, 118, 59);
+    color: white;
+}
+
+.success{
+    background-color: rgb(113, 184, 62);
+    color: white;
+}
