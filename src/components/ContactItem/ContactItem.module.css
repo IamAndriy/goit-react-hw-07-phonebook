@@ -19,7 +19,7 @@
     gap: 5px;
 }
 .contact-name{
-   width: calc(100% * 2 / 3);
+   width: calc(100% / 2);
 
     @media screen and (max-width: 899.8px){
         font-size: 12px;
@@ -29,7 +29,9 @@
     }
 }
 .contact-number{
-    width: calc(100% / 3);
+    width: calc(100% / 2);
+    text-align: right;
+    margin-right: 10px;
 
     @media screen and (max-width: 899.8px){
         font-size: 12px;

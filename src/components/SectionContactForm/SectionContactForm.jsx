@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addContact } from "../../redux/contactsSlice";
-import { getContacts } from "../../redux/selectors";
+import { addContact } from "../../redux/operations";
+import { selectContacts } from "../../redux/selectors";
 import { toast } from "react-toastify";
 import css from "./SectionContactForm.module.css";
 
 export const SectionContactForm = () => {
 
-    const contacts = useSelector(getContacts);
+    const contacts = useSelector(selectContacts);
     const dispatch = useDispatch();
 
     const onSubmitHandle = (e) => {
@@ -15,15 +15,15 @@ export const SectionContactForm = () => {
 
         const form = e.target;
         const name = form.elements.name.value;
-        const number = form.elements.number.value;
+        const phone = form.elements.number.value;
 
         if (contacts.some(contact => contact.name === name)){
             toast(`The contact <${name}> is elready existing!`, {closeButton: false, 
                                                                  ariaLabel: 'The contact is elready existing', 
                                                                  className: `${css.error}`});
         } else {
-            dispatch(addContact(name, number));
-            toast(`The contact <${name} , ${number}> was added to the book`, { closeButton: false, 
+            dispatch(addContact({name, phone}));
+            toast(`The contact <${name} , ${phone}> was added to the book`, { closeButton: false, 
                                                                                ariaLabel: 'The contact was added to the book', 
                                                                                className: `${css.success}`});
         }

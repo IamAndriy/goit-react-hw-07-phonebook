@@ -1,6 +1,7 @@
 .contact-list{
-    height: 370px;
-    max-width: 400px;
+    max-height: 370px;
+    height: 100%;
+    max-width: 700px;
     width: 100%;
     display: flex;
     flex-direction: column;
